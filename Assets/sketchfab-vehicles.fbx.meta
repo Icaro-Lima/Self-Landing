@@ -1,0 +1,740 @@
+fileFormatVersion: 2
+guid: 30c980f10845aaa4dad0dd403eccac33
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: body
+    100002: Camera
+    100004: capsule
+    100006: Circle
+    100008: cooling pipe
+    100010: docking port shroud
+    100012: door
+    100014: dragon 2 rig
+    100016: grid fin arm
+    100018: grid fin arm.001
+    100020: grid fin arm.002
+    100022: grid fin arm.003
+    100024: grid fin base
+    100026: grid fin long arm
+    100028: grid fin long arm.001
+    100030: grid fin long arm.002
+    100032: grid fin long arm.003
+    100034: grid fin outer rim
+    100036: grid fin outer rim.001
+    100038: grid fin outer rim.002
+    100040: grid fin outer rim.003
+    100042: grid fin pivot
+    100044: grid fin pivot.001
+    100046: grid fin pivot.002
+    100048: grid fin pivot.003
+    100050: grid fin waffle
+    100052: grid fin waffle.001
+    100054: grid fin waffle.002
+    100056: grid fin waffle.003
+    100058: ground
+    100060: heatshield
+    100062: ida top
+    100064: interstage center pusher tripod arm
+    100066: interstage center pusher tripod arm.001
+    100068: interstage center pusher tripod arm.002
+    100070: interstage center pusher tripod arm.003
+    100072: leg
+    100074: leg 1
+    100076: leg base
+    100078: leg base.001
+    100080: leg base.002
+    100082: leg base.003
+    100084: leg cover top
+    100086: leg hardware
+    100088: leg hardware.001
+    100090: leg hardware.002
+    100092: leg hardware.003
+    100094: leg latch cover
+    100096: leg latch cover.001
+    100098: leg latch cover.002
+    100100: leg latch cover.003
+    100102: leg piston
+    100104: leg piston 1
+    100106: leg piston 1 1
+    100108: leg piston 1.001
+    100110: leg piston 1.001 1
+    100112: leg piston 1.001_end
+    100114: leg piston 1.002
+    100116: leg piston 1.002 1
+    100118: leg piston 1.002_end
+    100120: leg piston 1.003
+    100122: leg piston 1.003 1
+    100124: leg piston 1.003_end
+    100126: leg piston 1_end
+    100128: leg piston 2
+    100130: leg piston 2 1
+    100132: leg piston 2.001
+    100134: leg piston 2.001 1
+    100136: leg piston 2.001_end
+    100138: leg piston 2.002
+    100140: leg piston 2.002 1
+    100142: leg piston 2.002_end
+    100144: leg piston 2.003
+    100146: leg piston 2.003 1
+    100148: leg piston 2.003_end
+    100150: leg piston 2_end
+    100152: leg piston 3
+    100154: leg piston 3 1
+    100156: leg piston 3.001
+    100158: leg piston 3.001 1
+    100160: leg piston 3.001_end
+    100162: leg piston 3.002
+    100164: leg piston 3.002 1
+    100166: leg piston 3.002_end
+    100168: leg piston 3.003
+    100170: leg piston 3.003 1
+    100172: leg piston 3.003_end
+    100174: leg piston 3_end
+    100176: leg piston 4
+    100178: leg piston 4.001
+    100180: leg piston 4.002
+    100182: leg piston 4.003
+    100184: leg piston base
+    100186: leg piston base.001
+    100188: leg piston base.002
+    100190: leg piston base.003
+    100192: leg piston tip
+    100194: leg piston tip 1
+    100196: leg piston tip.001
+    100198: leg piston tip.001 1
+    100200: leg piston tip.001_end
+    100202: leg piston tip.002
+    100204: leg piston tip.002 1
+    100206: leg piston tip.002_end
+    100208: leg piston tip.003
+    100210: leg piston tip.003 1
+    100212: leg piston tip.003_end
+    100214: leg piston tip_end
+    100216: leg piston.001
+    100218: leg piston.002
+    100220: leg piston.003
+    100222: leg root
+    100224: leg root_end
+    100226: leg tip base
+    100228: leg tip base.001
+    100230: leg tip base.002
+    100232: leg tip base.003
+    100234: leg.001
+    100236: leg.001 1
+    100238: leg.002
+    100240: leg.002 1
+    100242: leg.003
+    100244: leg.003 1
+    100246: m1ds
+    100248: nosecone
+    100250: nosecone 1
+    100252: nosecone body hinge
+    100254: nosecone hinge
+    100256: nosecone_end
+    100258: octaweb mount points
+    100260: octaweb mount points.001
+    100262: octaweb mount points.002
+    100264: octaweb mount points.003
+    100266: octaweb mount points.004
+    100268: octaweb mount points.005
+    100270: octaweb mount points.006
+    100272: octaweb mount points.007
+    100274: petal array
+    100276: petal join
+    100278: petals
+    100280: Plane
+    100282: railing
+    100284: railing.001
+    100286: railing.002
+    100288: railing.003
+    100290: rig
+    100292: root
+    100294: sd pod liner
+    100296: sign dragon2
+    100298: sign falcon9
+    100300: signpost
+    100302: signpost.001
+    100304: //RootNode
+    100306: stage one
+    100308: stage one 1
+    100310: stage one clamps
+    100312: stage separation pusher
+    100314: stage two
+    100316: stage two_end
+    100318: trunk
+    100320: trunk 1
+    100322: trunk heatshield protector
+    100324: trunk heatshield protector.001
+    100326: trunk umbilical
+    100328: trunk umbilical mount
+    100330: trunk_end
+    100332: vehicle
+    100334: windows
+    400000: body
+    400002: Camera
+    400004: capsule
+    400006: Circle
+    400008: cooling pipe
+    400010: docking port shroud
+    400012: door
+    400014: dragon 2 rig
+    400016: grid fin arm
+    400018: grid fin arm.001
+    400020: grid fin arm.002
+    400022: grid fin arm.003
+    400024: grid fin base
+    400026: grid fin long arm
+    400028: grid fin long arm.001
+    400030: grid fin long arm.002
+    400032: grid fin long arm.003
+    400034: grid fin outer rim
+    400036: grid fin outer rim.001
+    400038: grid fin outer rim.002
+    400040: grid fin outer rim.003
+    400042: grid fin pivot
+    400044: grid fin pivot.001
+    400046: grid fin pivot.002
+    400048: grid fin pivot.003
+    400050: grid fin waffle
+    400052: grid fin waffle.001
+    400054: grid fin waffle.002
+    400056: grid fin waffle.003
+    400058: ground
+    400060: heatshield
+    400062: ida top
+    400064: interstage center pusher tripod arm
+    400066: interstage center pusher tripod arm.001
+    400068: interstage center pusher tripod arm.002
+    400070: interstage center pusher tripod arm.003
+    400072: leg
+    400074: leg 1
+    400076: leg base
+    400078: leg base.001
+    400080: leg base.002
+    400082: leg base.003
+    400084: leg cover top
+    400086: leg hardware
+    400088: leg hardware.001
+    400090: leg hardware.002
+    400092: leg hardware.003
+    400094: leg latch cover
+    400096: leg latch cover.001
+    400098: leg latch cover.002
+    400100: leg latch cover.003
+    400102: leg piston
+    400104: leg piston 1
+    400106: leg piston 1 1
+    400108: leg piston 1.001
+    400110: leg piston 1.001 1
+    400112: leg piston 1.001_end
+    400114: leg piston 1.002
+    400116: leg piston 1.002 1
+    400118: leg piston 1.002_end
+    400120: leg piston 1.003
+    400122: leg piston 1.003 1
+    400124: leg piston 1.003_end
+    400126: leg piston 1_end
+    400128: leg piston 2
+    400130: leg piston 2 1
+    400132: leg piston 2.001
+    400134: leg piston 2.001 1
+    400136: leg piston 2.001_end
+    400138: leg piston 2.002
+    400140: leg piston 2.002 1
+    400142: leg piston 2.002_end
+    400144: leg piston 2.003
+    400146: leg piston 2.003 1
+    400148: leg piston 2.003_end
+    400150: leg piston 2_end
+    400152: leg piston 3
+    400154: leg piston 3 1
+    400156: leg piston 3.001
+    400158: leg piston 3.001 1
+    400160: leg piston 3.001_end
+    400162: leg piston 3.002
+    400164: leg piston 3.002 1
+    400166: leg piston 3.002_end
+    400168: leg piston 3.003
+    400170: leg piston 3.003 1
+    400172: leg piston 3.003_end
+    400174: leg piston 3_end
+    400176: leg piston 4
+    400178: leg piston 4.001
+    400180: leg piston 4.002
+    400182: leg piston 4.003
+    400184: leg piston base
+    400186: leg piston base.001
+    400188: leg piston base.002
+    400190: leg piston base.003
+    400192: leg piston tip
+    400194: leg piston tip 1
+    400196: leg piston tip.001
+    400198: leg piston tip.001 1
+    400200: leg piston tip.001_end
+    400202: leg piston tip.002
+    400204: leg piston tip.002 1
+    400206: leg piston tip.002_end
+    400208: leg piston tip.003
+    400210: leg piston tip.003 1
+    400212: leg piston tip.003_end
+    400214: leg piston tip_end
+    400216: leg piston.001
+    400218: leg piston.002
+    400220: leg piston.003
+    400222: leg root
+    400224: leg root_end
+    400226: leg tip base
+    400228: leg tip base.001
+    400230: leg tip base.002
+    400232: leg tip base.003
+    400234: leg.001
+    400236: leg.001 1
+    400238: leg.002
+    400240: leg.002 1
+    400242: leg.003
+    400244: leg.003 1
+    400246: m1ds
+    400248: nosecone
+    400250: nosecone 1
+    400252: nosecone body hinge
+    400254: nosecone hinge
+    400256: nosecone_end
+    400258: octaweb mount points
+    400260: octaweb mount points.001
+    400262: octaweb mount points.002
+    400264: octaweb mount points.003
+    400266: octaweb mount points.004
+    400268: octaweb mount points.005
+    400270: octaweb mount points.006
+    400272: octaweb mount points.007
+    400274: petal array
+    400276: petal join
+    400278: petals
+    400280: Plane
+    400282: railing
+    400284: railing.001
+    400286: railing.002
+    400288: railing.003
+    400290: rig
+    400292: root
+    400294: sd pod liner
+    400296: sign dragon2
+    400298: sign falcon9
+    400300: signpost
+    400302: signpost.001
+    400304: //RootNode
+    400306: stage one
+    400308: stage one 1
+    400310: stage one clamps
+    400312: stage separation pusher
+    400314: stage two
+    400316: stage two_end
+    400318: trunk
+    400320: trunk 1
+    400322: trunk heatshield protector
+    400324: trunk heatshield protector.001
+    400326: trunk umbilical
+    400328: trunk umbilical mount
+    400330: trunk_end
+    400332: vehicle
+    400334: windows
+    2000000: Camera
+    2100000: sign dragon2
+    2100002: signpost
+    2100004: sign falcon9
+    2100006: railing
+    2100008: pad
+    2100010: stage one skin
+    2100012: skin.006
+    2100014: No Name
+    2100016: body
+    2100018: draco thruster
+    2100020: heatshield
+    2100022: grey plastic
+    2100024: shiny metal
+    2100026: composite
+    2100028: trunk
+    2100030: windows
+    2300000: body
+    2300002: Circle
+    2300004: cooling pipe
+    2300006: docking port shroud
+    2300008: door
+    2300010: grid fin arm
+    2300012: grid fin arm.001
+    2300014: grid fin arm.002
+    2300016: grid fin arm.003
+    2300018: grid fin base
+    2300020: grid fin long arm
+    2300022: grid fin long arm.001
+    2300024: grid fin long arm.002
+    2300026: grid fin long arm.003
+    2300028: grid fin outer rim
+    2300030: grid fin outer rim.001
+    2300032: grid fin outer rim.002
+    2300034: grid fin outer rim.003
+    2300036: grid fin pivot
+    2300038: grid fin pivot.001
+    2300040: grid fin pivot.002
+    2300042: grid fin pivot.003
+    2300044: grid fin waffle
+    2300046: grid fin waffle.001
+    2300048: grid fin waffle.002
+    2300050: grid fin waffle.003
+    2300052: ground
+    2300054: heatshield
+    2300056: ida top
+    2300058: interstage center pusher tripod arm
+    2300060: interstage center pusher tripod arm.001
+    2300062: interstage center pusher tripod arm.002
+    2300064: interstage center pusher tripod arm.003
+    2300066: leg 1
+    2300068: leg cover top
+    2300070: leg hardware
+    2300072: leg hardware.001
+    2300074: leg hardware.002
+    2300076: leg hardware.003
+    2300078: leg latch cover
+    2300080: leg latch cover.001
+    2300082: leg latch cover.002
+    2300084: leg latch cover.003
+    2300086: leg piston 1 1
+    2300088: leg piston 1.001 1
+    2300090: leg piston 1.002 1
+    2300092: leg piston 1.003 1
+    2300094: leg piston 2 1
+    2300096: leg piston 2.001 1
+    2300098: leg piston 2.002 1
+    2300100: leg piston 2.003 1
+    2300102: leg piston 3 1
+    2300104: leg piston 3.001 1
+    2300106: leg piston 3.002 1
+    2300108: leg piston 3.003 1
+    2300110: leg piston 4
+    2300112: leg piston 4.001
+    2300114: leg piston 4.002
+    2300116: leg piston 4.003
+    2300118: leg piston tip 1
+    2300120: leg piston tip.001 1
+    2300122: leg piston tip.002 1
+    2300124: leg piston tip.003 1
+    2300126: leg.001 1
+    2300128: leg.002 1
+    2300130: leg.003 1
+    2300132: m1ds
+    2300134: nosecone 1
+    2300136: nosecone body hinge
+    2300138: nosecone hinge
+    2300140: octaweb mount points
+    2300142: octaweb mount points.001
+    2300144: octaweb mount points.002
+    2300146: octaweb mount points.003
+    2300148: octaweb mount points.004
+    2300150: octaweb mount points.005
+    2300152: octaweb mount points.006
+    2300154: octaweb mount points.007
+    2300156: petal join
+    2300158: petals
+    2300160: Plane
+    2300162: railing
+    2300164: railing.001
+    2300166: railing.002
+    2300168: railing.003
+    2300170: sd pod liner
+    2300172: sign dragon2
+    2300174: sign falcon9
+    2300176: signpost
+    2300178: signpost.001
+    2300180: stage one 1
+    2300182: stage one clamps
+    2300184: stage separation pusher
+    2300186: trunk 1
+    2300188: trunk heatshield protector
+    2300190: trunk heatshield protector.001
+    2300192: trunk umbilical
+    2300194: trunk umbilical mount
+    2300196: windows
+    3300000: body
+    3300002: Circle
+    3300004: cooling pipe
+    3300006: docking port shroud
+    3300008: door
+    3300010: grid fin arm
+    3300012: grid fin arm.001
+    3300014: grid fin arm.002
+    3300016: grid fin arm.003
+    3300018: grid fin base
+    3300020: grid fin long arm
+    3300022: grid fin long arm.001
+    3300024: grid fin long arm.002
+    3300026: grid fin long arm.003
+    3300028: grid fin outer rim
+    3300030: grid fin outer rim.001
+    3300032: grid fin outer rim.002
+    3300034: grid fin outer rim.003
+    3300036: grid fin pivot
+    3300038: grid fin pivot.001
+    3300040: grid fin pivot.002
+    3300042: grid fin pivot.003
+    3300044: grid fin waffle
+    3300046: grid fin waffle.001
+    3300048: grid fin waffle.002
+    3300050: grid fin waffle.003
+    3300052: ground
+    3300054: heatshield
+    3300056: ida top
+    3300058: interstage center pusher tripod arm
+    3300060: interstage center pusher tripod arm.001
+    3300062: interstage center pusher tripod arm.002
+    3300064: interstage center pusher tripod arm.003
+    3300066: leg 1
+    3300068: leg cover top
+    3300070: leg hardware
+    3300072: leg hardware.001
+    3300074: leg hardware.002
+    3300076: leg hardware.003
+    3300078: leg latch cover
+    3300080: leg latch cover.001
+    3300082: leg latch cover.002
+    3300084: leg latch cover.003
+    3300086: leg piston 1 1
+    3300088: leg piston 1.001 1
+    3300090: leg piston 1.002 1
+    3300092: leg piston 1.003 1
+    3300094: leg piston 2 1
+    3300096: leg piston 2.001 1
+    3300098: leg piston 2.002 1
+    3300100: leg piston 2.003 1
+    3300102: leg piston 3 1
+    3300104: leg piston 3.001 1
+    3300106: leg piston 3.002 1
+    3300108: leg piston 3.003 1
+    3300110: leg piston 4
+    3300112: leg piston 4.001
+    3300114: leg piston 4.002
+    3300116: leg piston 4.003
+    3300118: leg piston tip 1
+    3300120: leg piston tip.001 1
+    3300122: leg piston tip.002 1
+    3300124: leg piston tip.003 1
+    3300126: leg.001 1
+    3300128: leg.002 1
+    3300130: leg.003 1
+    3300132: m1ds
+    3300134: nosecone 1
+    3300136: nosecone body hinge
+    3300138: nosecone hinge
+    3300140: octaweb mount points
+    3300142: octaweb mount points.001
+    3300144: octaweb mount points.002
+    3300146: octaweb mount points.003
+    3300148: octaweb mount points.004
+    3300150: octaweb mount points.005
+    3300152: octaweb mount points.006
+    3300154: octaweb mount points.007
+    3300156: petal join
+    3300158: petals
+    3300160: Plane
+    3300162: railing
+    3300164: railing.001
+    3300166: railing.002
+    3300168: railing.003
+    3300170: sd pod liner
+    3300172: sign dragon2
+    3300174: sign falcon9
+    3300176: signpost
+    3300178: signpost.001
+    3300180: stage one 1
+    3300182: stage one clamps
+    3300184: stage separation pusher
+    3300186: trunk 1
+    3300188: trunk heatshield protector
+    3300190: trunk heatshield protector.001
+    3300192: trunk umbilical
+    3300194: trunk umbilical mount
+    3300196: windows
+    4300000: sign dragon2
+    4300002: signpost
+    4300004: signpost.001
+    4300006: sign falcon9
+    4300008: railing.003
+    4300010: railing.002
+    4300012: railing.001
+    4300014: railing
+    4300016: ground
+    4300018: grid fin pivot.003
+    4300020: grid fin arm.003
+    4300022: grid fin long arm.003
+    4300024: grid fin outer rim.003
+    4300026: grid fin waffle.003
+    4300028: grid fin waffle.002
+    4300030: grid fin outer rim.002
+    4300032: grid fin long arm.002
+    4300034: grid fin arm.002
+    4300036: grid fin pivot.002
+    4300038: grid fin pivot.001
+    4300040: grid fin arm.001
+    4300042: grid fin long arm.001
+    4300044: grid fin outer rim.001
+    4300046: grid fin waffle.001
+    4300048: interstage center pusher tripod arm.003
+    4300050: interstage center pusher tripod arm.002
+    4300052: grid fin waffle
+    4300054: grid fin outer rim
+    4300056: grid fin long arm
+    4300058: grid fin arm
+    4300060: grid fin pivot
+    4300062: grid fin base
+    4300064: stage one
+    4300066: stage separation pusher
+    4300068: Circle
+    4300070: octaweb mount points
+    4300072: octaweb mount points.001
+    4300074: leg cover top
+    4300076: octaweb mount points.006
+    4300078: octaweb mount points.007
+    4300080: octaweb mount points.004
+    4300082: octaweb mount points.005
+    4300084: octaweb mount points.002
+    4300086: octaweb mount points.003
+    4300088: cooling pipe
+    4300090: m1ds
+    4300092: leg
+    4300094: leg hardware
+    4300096: leg latch cover
+    4300098: leg piston tip
+    4300100: leg piston 4
+    4300102: leg piston 2
+    4300104: leg piston 3
+    4300106: leg piston 1
+    4300108: leg.001
+    4300110: leg latch cover.001
+    4300112: leg hardware.001
+    4300114: leg piston 4.001
+    4300116: leg piston tip.001
+    4300118: leg piston 2.001
+    4300120: leg piston 3.001
+    4300122: leg piston 1.001
+    4300124: leg.002
+    4300126: leg latch cover.002
+    4300128: leg hardware.002
+    4300130: leg piston tip.002
+    4300132: leg piston 4.002
+    4300134: leg piston 2.002
+    4300136: leg piston 3.002
+    4300138: leg piston 1.002
+    4300140: leg.003
+    4300142: leg latch cover.003
+    4300144: leg hardware.003
+    4300146: leg piston 4.003
+    4300148: leg piston tip.003
+    4300150: leg piston 2.003
+    4300152: leg piston 3.003
+    4300154: leg piston 1.003
+    4300156: stage one clamps
+    4300158: ida top
+    4300160: body
+    4300162: sd pod liner
+    4300164: heatshield
+    4300166: door
+    4300168: docking port shroud
+    4300170: petal join
+    4300172: petals
+    4300174: nosecone hinge
+    4300176: nosecone body hinge
+    4300178: nosecone
+    4300180: trunk
+    4300182: trunk heatshield protector.001
+    4300184: trunk umbilical mount
+    4300186: trunk umbilical
+    4300188: Plane
+    4300190: trunk heatshield protector
+    4300192: windows
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
