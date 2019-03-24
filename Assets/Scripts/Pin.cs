@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aim : MonoBehaviour
+public class Pin : MonoBehaviour
 {
-    public Transform TransformToAim;
-    public bool Invert;
+    public Transform TransformToPin;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +15,6 @@ public class Aim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(TransformToAim);
-
-        if (Invert)
-        {
-            transform.eulerAngles = -transform.eulerAngles;
-        }
+        transform.position += TransformToPin.position - transform.position;
     }
 }
