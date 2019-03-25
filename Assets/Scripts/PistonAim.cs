@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aim : MonoBehaviour
+public class PistonAim : MonoBehaviour
 {
     public Transform TransformToAim;
     public bool Invert;
