@@ -14,7 +14,14 @@ public class RealSize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TotalSize = GetComponent<MeshRenderer>().bounds.size;
+        Bounds bounds = new Bounds(transform.position, Vector3.zero);
+
+        foreach (Renderer r in GetComponentsInChildren<Renderer>())
+        {
+            bounds.Encapsulate(r.bounds);
+        }
+
+        TotalSize = bounds.size;
 
         Vector3 scale = transform.localScale;
 
