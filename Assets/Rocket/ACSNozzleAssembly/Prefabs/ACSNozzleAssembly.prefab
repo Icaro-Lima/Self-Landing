@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1706314236761505584}
   - component: {fileID: 30890478334506417}
   m_Layer: 0
-  m_Name: ColdGas
+  m_Name: ACSNozzleAssembly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,11 +60,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706314236761505584}
     m_Modifications:
-    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrusterRight
-      objectReference: {fileID: 0}
     - target: {fileID: 4225045144748641664, guid: 93e901b59052d8f4ca123ec8283d0378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -120,6 +115,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
+        type: 3}
+      propertyPath: m_Name
+      value: ACSNozzleRight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e901b59052d8f4ca123ec8283d0378, type: 3}
 --- !u!4 &113988745540244511 stripped
@@ -141,11 +141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706314236761505584}
     m_Modifications:
-    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrusterLeft
-      objectReference: {fileID: 0}
     - target: {fileID: 4225045144748641664, guid: 93e901b59052d8f4ca123ec8283d0378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,6 +196,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
+        type: 3}
+      propertyPath: m_Name
+      value: ACSNozzleLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e901b59052d8f4ca123ec8283d0378, type: 3}
 --- !u!4 &9181105635191873089 stripped
@@ -222,11 +222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706314236761505584}
     m_Modifications:
-    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrusterDown
-      objectReference: {fileID: 0}
     - target: {fileID: 4225045144748641664, guid: 93e901b59052d8f4ca123ec8283d0378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,6 +277,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
+        type: 3}
+      propertyPath: m_Name
+      value: ACSNozzleDown
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e901b59052d8f4ca123ec8283d0378, type: 3}
 --- !u!4 &7356255939400691217 stripped
@@ -303,11 +303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706314236761505584}
     m_Modifications:
-    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrusterUp
-      objectReference: {fileID: 0}
     - target: {fileID: 4225045144748641664, guid: 93e901b59052d8f4ca123ec8283d0378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -363,6 +358,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
+        type: 3}
+      propertyPath: m_Name
+      value: ACSNozzleUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e901b59052d8f4ca123ec8283d0378, type: 3}
 --- !u!4 &6791794866229061034 stripped
@@ -384,11 +384,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706314236761505584}
     m_Modifications:
-    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
-        type: 3}
-      propertyPath: m_Name
-      value: ThrusterBackward
-      objectReference: {fileID: 0}
     - target: {fileID: 4225045144748641664, guid: 93e901b59052d8f4ca123ec8283d0378,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -443,6 +438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 381653055217724268, guid: 93e901b59052d8f4ca123ec8283d0378,
+        type: 3}
+      propertyPath: m_Name
+      value: ACSNozzleBackward
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e901b59052d8f4ca123ec8283d0378, type: 3}

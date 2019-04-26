@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColdGasThrusterService : MonoBehaviour
+public class ACSNozzleAssemblyService : MonoBehaviour
 {
     public ParticleSystem ThrusterUp;
     public ParticleSystem ThrusterDown;

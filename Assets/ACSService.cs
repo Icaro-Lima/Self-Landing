@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColdGasSystemController : MonoBehaviour
+public class ACSService : MonoBehaviour
 {
-    public ColdGasThrusterService[] ColdGasThrusterServices;
+    public ACSNozzleAssemblyService[] ColdGasThrusterServices;
 
     Rigidbody RocketRigidbody;
 
