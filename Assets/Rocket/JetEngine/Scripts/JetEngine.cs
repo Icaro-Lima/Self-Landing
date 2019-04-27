@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetEngineAnimation : MonoBehaviour
+public class JetEngine : MonoBehaviour
 {
     public float Force = 1;
 
