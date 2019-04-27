@@ -3534,7 +3534,7 @@ PrefabInstance:
     - target: {fileID: 7964411426588421628, guid: 817b422b232cf204eb799a0755d826df,
         type: 3}
       propertyPath: m_Name
-      value: JetEngine
+      value: JetEngineAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 7964411426588160612, guid: 817b422b232cf204eb799a0755d826df,
         type: 3}
