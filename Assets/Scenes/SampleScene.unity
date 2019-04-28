@@ -2874,7 +2874,6 @@ GameObject:
   - component: {fileID: 5696359274901402988}
   - component: {fileID: 5696359274897978686}
   - component: {fileID: 5696359274898978558}
-  - component: {fileID: 5696359274900908429}
   m_Layer: 0
   m_Name: TurbinesOutside
   m_TagString: Untagged
@@ -2882,19 +2881,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5696359274900908429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696359274900908428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88f52d4f10fbd7488ba3693634dada3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetForceMultiplier: 0
 --- !u!1 &5696359274900908458
 GameObject:
   m_ObjectHideFlags: 0
