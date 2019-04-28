@@ -3120,6 +3120,7 @@ GameObject:
   - component: {fileID: 5696359274901403054}
   - component: {fileID: 5696359274897978702}
   - component: {fileID: 5696359274898978574}
+  - component: {fileID: 5696359274900908496}
   m_Layer: 0
   m_Name: StageOne
   m_TagString: Untagged
@@ -3140,6 +3141,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: {x: 0, y: 0, z: 0}
+  Center: {x: 0, y: 0, z: 0}
+--- !u!65 &5696359274900908496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696359274900908494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.036600024, y: 0.03660001, z: 0.4734}
+  m_Center: {x: -0.000000010385738, y: -0.0000000034231682, z: 0.2473}
 --- !u!4 &5696359274901402770
 Transform:
   m_ObjectHideFlags: 0

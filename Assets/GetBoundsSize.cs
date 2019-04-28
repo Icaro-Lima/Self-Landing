@@ -7,20 +7,25 @@ public class GetBoundsSize : MonoBehaviour
 {
     [ReadOnly]
     public Vector3 Size;
+    public Vector3 Center;
 
     // Start is called before the first frame update
     void Start()
     {
-        Size = GetSize();
+        Bounds bounds = GetBounds();
+        Size = bounds.size;
+        Center = bounds.center;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Size = GetSize();
+        Bounds bounds = GetBounds();
+        Size = bounds.size;
+        Center = bounds.center;
     }
 
-    Vector3 GetSize()
+    Bounds GetBounds()
     {
         Bounds bounds = new Bounds();
         foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
@@ -28,6 +33,6 @@ public class GetBoundsSize : MonoBehaviour
             bounds.Encapsulate(renderer.bounds);
         }
 
-        return bounds.size;
+        return bounds;
     }
 }
