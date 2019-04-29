@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7964411426588160612}
   - component: {fileID: 7964411427171383430}
   m_Layer: 0
-  m_Name: JetEngine
+  m_Name: JetEngineAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c7d687fabe5ad4fa3b18256cf19049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 0
+  ForceParameter: 0
 --- !u!1 &7964411426588504550
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +894,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 60
       minScalar: 10
       maxCurve:
         serializedVersion: 2

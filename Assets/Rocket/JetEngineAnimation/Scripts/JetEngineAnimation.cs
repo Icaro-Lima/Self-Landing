@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class JetEngineAnimation : MonoBehaviour
 {
-    public float Force = 1;
+    [Range(0, 1)]
+    public float ForceParameter = 0;
 
     Light Light;
 
@@ -17,7 +18,9 @@ public class JetEngineAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = new Vector3(Force, 4 * Force, Force);
-        Light.range = 5 * Force;
+        float force = ForceParameter * 1.5f;
+
+        transform.localScale = new Vector3(5 * force, 9 * force, 5 * force);
+        Light.range = 5 * force;
     }
 }
