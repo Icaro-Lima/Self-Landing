@@ -7,11 +7,13 @@ public class MainThrusterService : MonoBehaviour
     [Range(0, 1)]
     public float TargetForceParameter = 0;
 
+    public float ForceParameter = 0;
+
     Rigidbody RocketRigidbody;
 
-    float ForceParameter = 0;
-    readonly float ForceParameterUpVarByUpdate = 0.07f;
-    readonly float ForceParameterDownVarByUpdate = 0.1f;
+    readonly float ForceMultiplier = 21f;
+    readonly float ForceParameterUpVarByUpdate = 0.003f;
+    readonly float ForceParameterDownVarByUpdate = 0.006f;
 
     public JetEngineAnimation JetEngineAnimation;
 
@@ -42,6 +44,6 @@ public class MainThrusterService : MonoBehaviour
 
         ForceParameter = Mathf.Clamp01(ForceParameter);
 
-        RocketRigidbody.AddForceAtPosition(ForceParameter * transform.forward, transform.position);
+        RocketRigidbody.AddForceAtPosition(ForceParameter * ForceMultiplier * transform.forward, transform.position);
     }
 }
