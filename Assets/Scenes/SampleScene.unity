@@ -229,6 +229,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7964411426739444277}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &165131389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7964411427171383430, guid: 817b422b232cf204eb799a0755d826df,
+    type: 3}
+  m_PrefabInstance: {fileID: 7964411426739444277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c7d687fabe5ad4fa3b18256cf19049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &205606474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3645045044234000412, guid: e7e2c08c3c68dc846b1bde5a53176e85,
@@ -3183,6 +3195,7 @@ GameObject:
   - component: {fileID: 5696359274901402988}
   - component: {fileID: 5696359274897978686}
   - component: {fileID: 5696359274898978558}
+  - component: {fileID: 5696359274900908429}
   m_Layer: 0
   m_Name: TurbinesOutside
   m_TagString: Untagged
@@ -3190,6 +3203,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5696359274900908429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696359274900908428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2336670a0f39ef548ad15c72ab598d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetForceParameter: 0
+  JetEngineAnimation: {fileID: 165131389}
 --- !u!1 &5696359274900908458
 GameObject:
   m_ObjectHideFlags: 0
