@@ -11,7 +11,7 @@ public class Orbiting : MonoBehaviour
     {
         Rigidbody = GetComponent<Rigidbody>();
 
-        Rigidbody.AddForce(transform.up * 10000, ForceMode.Acceleration);
+        Rigidbody.AddForce(transform.up * 4500, ForceMode.Acceleration);
     }
 
     // Update is called once per frame

@@ -6,8 +6,6 @@ public class Gravity : MonoBehaviour
 {
     Rigidbody Rigidbody;
 
-    public float ItsGravity;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +15,6 @@ public class Gravity : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        ItsGravity = CompGravity();
-
         Rigidbody.AddForce((Vector3.zero - Rigidbody.transform.position).normalized * CompGravity(), ForceMode.Acceleration);
     }
 
