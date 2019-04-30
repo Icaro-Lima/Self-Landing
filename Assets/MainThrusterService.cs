@@ -11,6 +11,8 @@ public class MainThrusterService : MonoBehaviour
 
     Rigidbody RocketRigidbody;
 
+    AudioSource AudioSource;
+
     readonly float ForceMultiplier = 21f;
     readonly float ForceParameterUpVarByUpdate = 0.003f;
     readonly float ForceParameterDownVarByUpdate = 0.006f;
@@ -21,14 +23,22 @@ public class MainThrusterService : MonoBehaviour
     void Start()
     {
         RocketRigidbody = GetComponentInParent<Rigidbody>();
+
+        AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleForces();
+        HandleSounds();
 
         JetEngineAnimation.ForceParameter = ForceParameter;
+    }
+
+    void HandleSounds()
+    {
+        AudioSource.volume = Mathf.SmoothStep(0, 0.5f, ForceParameter);
     }
 
     void HandleForces()
