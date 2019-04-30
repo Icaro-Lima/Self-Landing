@@ -3217,7 +3217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetForceParameter: 0
-  ForceParameter: 0
   JetEngineAnimation: {fileID: 165131389}
 --- !u!82 &5696359274900908430
 AudioSource:
@@ -3490,6 +3489,7 @@ GameObject:
   - component: {fileID: 5696359274900908493}
   - component: {fileID: 5696359274900908497}
   - component: {fileID: 5696359274900908495}
+  - component: {fileID: 5696359274900908498}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -3572,7 +3572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5696359274900908490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7fe6716dbde3241be5a448b07b6537, type: 3}
+  m_Script: {fileID: 11500000, guid: a00ca19cc5db04844a5ff4d5dc97b47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &5696359274900908496
@@ -3598,6 +3598,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f6df1e21c010eb42a7c59183b67d1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5696359274900908498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696359274900908490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68343e9446906b94ebc87ad74a5cbcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &5696359274901402770

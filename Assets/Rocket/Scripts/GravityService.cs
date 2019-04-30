@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gravity : MonoBehaviour
+public class GravityService : MonoBehaviour
 {
     Rigidbody Rigidbody;
 
@@ -25,6 +25,6 @@ public class Gravity : MonoBehaviour
 
         float sqrDistFromCenter = Rigidbody.worldCenterOfMass.sqrMagnitude;
 
-        return gEarth * Mathf.Pow(rEarth, 2) / sqrDistFromCenter;
+        return gEarth * rEarth * rEarth / sqrDistFromCenter;
     }
 }

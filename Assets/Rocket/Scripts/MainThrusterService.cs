@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MainThrusterService : MonoBehaviour
 {
-    [Range(0, 1)]
     public float TargetForceParameter = 0;
 
-    public float ForceParameter = 0;
+    public float ForceParameter { get; private set; }
 
     Rigidbody RocketRigidbody;
 
