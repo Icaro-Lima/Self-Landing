@@ -19,6 +19,31 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     public ParticleSystem ThrusterLeft;
 
     /// <summary>
+    /// Flag indicando se o bocal de cima está ligado.
+    /// </summary>
+    public bool UpEnabled;
+
+    /// <summary>
+    /// Flag indicando se o bocal de baixo está ligado.
+    /// </summary>
+    public bool DownEnabled;
+
+    /// <summary>
+    /// Flag indicando se o bocal de trás está ligado.
+    /// </summary>
+    public bool BackwardEnabled;
+
+    /// <summary>
+    /// Flag indicando se o bocal da direita está ligado.
+    /// </summary>
+    public bool RightEnabled;
+
+    /// <summary>
+    /// Flag indicando se o bocal da esquerda está ligado.
+    /// </summary>
+    public bool LeftEnabled;
+
+    /// <summary>
     /// O RigidBody (controlador de física) do foguete. Note que essa classe deve estar atrelada a
     /// um GameObject dentro do foguete.
     /// </summary>
@@ -33,39 +58,76 @@ public class ACSNozzleAssemblyService : MonoBehaviour
         RocketRigidBody = GetComponentInParent<Rigidbody>();
     }
 
-    /// <summary>
-    /// Libera gás comprimido do bocal da direita, gerando movimento para esquerda.
-    /// </summary>
-    public void Right()
+    void Update()
     {
-        ThrusterRight.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward, ThrusterRight.transform.position);
+        if (UpEnabled)
+        {
+            Up();
+        }
+
+        if (DownEnabled)
+        {
+            Down();
+        }
+
+        if (BackwardEnabled)
+        {
+            Backward();
+        }
+
+        if (RightEnabled)
+        {
+            Right();
+        }
+
+        if (LeftEnabled)
+        {
+            Left();
+        }
     }
 
     /// <summary>
-    /// Libera gás comprimido do bocal da esquerda, gerando movimento para direita.
+    /// Libera gás comprimido do bocal de cima.
     /// </summary>
-    public void Left()
-    {
-        ThrusterLeft.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward, ThrusterLeft.transform.position);
-    }
-
-    /// <summary>
-    /// Libera gás comprimido do bocal de cima, gerando movimento para baixo.
-    /// </summary>
-    public void Up()
+    void Up()
     {
         ThrusterUp.Play();
         RocketRigidBody.AddForceAtPosition(-ThrusterUp.transform.forward, ThrusterUp.transform.position);
     }
 
     /// <summary>
-    /// Libera gás comprimido do bocal de baixo, gerando movimento para cima.
+    /// Libera gás comprimido do bocal de baixo.
     /// </summary>
-    public void Down()
+    void Down()
     {
         ThrusterDown.Play();
         RocketRigidBody.AddForceAtPosition(-ThrusterDown.transform.forward, ThrusterDown.transform.position);
+    }
+
+    /// <summary>
+    /// Libera gás comprimido do bocal de trás.
+    /// </summary>
+    void Backward()
+    {
+        ThrusterBackward.Play();
+        RocketRigidBody.AddForceAtPosition(-ThrusterBackward.transform.forward, ThrusterBackward.transform.position);
+    }
+
+    /// <summary>
+    /// Libera gás comprimido do bocal da direita.
+    /// </summary>
+    void Right()
+    {
+        ThrusterRight.Play();
+        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward, ThrusterRight.transform.position);
+    }
+
+    /// <summary>
+    /// Libera gás comprimido do bocal da esquerda.
+    /// </summary>
+    void Left()
+    {
+        ThrusterLeft.Play();
+        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward, ThrusterLeft.transform.position);
     }
 }
