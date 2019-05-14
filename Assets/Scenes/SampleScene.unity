@@ -540,7 +540,15 @@ PrefabInstance:
       objectReference: {fileID: 1783252888}
     - target: {fileID: 11401934, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
       propertyPath: RotationSpeed
-      value: -1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401934, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: IcoSphere
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401934, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: lastIcoSphere
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3361438, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
       propertyPath: m_Mesh
@@ -3378,6 +3386,7 @@ GameObject:
   - component: {fileID: 5696359274900908495}
   - component: {fileID: 5696359274900908498}
   - component: {fileID: 5696359274900908499}
+  - component: {fileID: 5696359274900908500}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -3458,7 +3467,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696359274900908490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a00ca19cc5db04844a5ff4d5dc97b47d, type: 3}
   m_Name: 
@@ -3470,7 +3479,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696359274900908494}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bd2dece8b50aa8244b7bc2024f0b6fd0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3519,7 +3528,21 @@ MonoBehaviour:
     maxStep: 0
     resetOnDone: 1
     onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 0
+    numberOfActionsBetweenDecisions: 1
+--- !u!114 &5696359274900908500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696359274900908490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08c164600cc4c9488772a4491f862a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Size: {x: 0, y: 0, z: 0}
+  Center: {x: 0, y: 0, z: 0}
 --- !u!4 &5696359274901402770
 Transform:
   m_ObjectHideFlags: 0
