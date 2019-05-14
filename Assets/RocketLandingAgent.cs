@@ -7,10 +7,20 @@ public class RocketLandingAgent : Agent
 {
     Rigidbody Rigidbody;
 
+    RocketService RocketService;
+
+    Vector3 InitialPosition;
+    Quaternion InitialRotation;
+
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
+
+        RocketService = GetComponent<RocketService>();
+
+        InitialPosition = Rigidbody.position;
+        InitialRotation = Rigidbody.rotation;
     }
 
     // Update is called once per frame
@@ -26,7 +36,10 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
-
+        Rigidbody.velocity = Vector3.zero;
+        Rigidbody.angularVelocity = Vector3.zero;
+        Rigidbody.position = InitialPosition;
+        Rigidbody.rotation = InitialRotation;
     }
 
     /// <summary>
@@ -34,19 +47,15 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void CollectObservations()
     {
-        // Exemplo adicionando a posição atual ao vetor (o Unity sabe que a
-        // posição tem 3 valores e cuida disso).
+        AddVectorObs(Rigidbody.velocity);
+        AddVectorObs(Rigidbody.angularVelocity);
         AddVectorObs(Rigidbody.position);
-
-        // Exemplo adicionando a rotação do foguete.
-        // A rotação é um Quaternion. Uma breve estudada em ângulos de Euler
-        // dá uma noção da necessidade do uso do Quaternion.
         AddVectorObs(Rigidbody.rotation);
+        AddVectorObs(RocketService.NormalToThePlane());
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        // Adicione recompensas.
-        AddReward(0);
+
     }
 }

@@ -8,13 +8,23 @@ using UnityEngine;
 /// </summary>
 public class RocketService : MonoBehaviour
 {
+    public GameObject Plane;
+
+    Rigidbody Rigidbody;
+
     MainThrusterService MainThrusterService;
     ACSNozzleAssemblyService[] ACSNozzleAssemblyServices;
-
 
     // Start is called before the first frame update
     void Start()
     {
+        if (Plane == null)
+        {
+            Debug.LogError("Plane null!");
+        }
+
+        Rigidbody = GetComponent<Rigidbody>();
+
         MainThrusterService = GetComponentInChildren<MainThrusterService>();
         ACSNozzleAssemblyServices = GetComponentsInChildren<ACSNozzleAssemblyService>();
     }
@@ -36,6 +46,14 @@ public class RocketService : MonoBehaviour
     public float GetRealMainThrusterPower()
     {
         return MainThrusterService.ForceParameter;
+    }
+
+    /// <summary>
+    /// Retorna um vetor normal do foguete que aponta para o plano.
+    /// </summary>
+    public Vector3 NormalToThePlane()
+    {
+        return Plane.transform.position - Rigidbody.position;
     }
 
     /// <summary>

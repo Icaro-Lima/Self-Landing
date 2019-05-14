@@ -860,8 +860,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   broadcastHub:
-    broadcastingBrains: []
-    _brainsToControl: []
+    broadcastingBrains:
+    - {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
+    _brainsToControl:
+    - {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
   maxSteps: 0
   trainingConfiguration:
     width: 80
@@ -1661,6 +1663,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 135, y: 0, z: 0}
+--- !u!1 &1794884559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327120450, guid: c2e22098ce7c8da4590cceb5113bd50e,
+    type: 3}
+  m_PrefabInstance: {fileID: 599031708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1797920291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8336663121605093314, guid: f18fc0e6498aab642aacca5b57abe45e,
@@ -3386,7 +3394,6 @@ GameObject:
   - component: {fileID: 5696359274900908495}
   - component: {fileID: 5696359274900908498}
   - component: {fileID: 5696359274900908499}
-  - component: {fileID: 5696359274900908500}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -3509,6 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68343e9446906b94ebc87ad74a5cbcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Plane: {fileID: 1794884559}
 --- !u!114 &5696359274900908499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,7 +3529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f00b6c1079544409e4052f243d7c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 0}
+  brain: {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
   agentParameters:
     agentCameras: []
     agentRenderTextures: []
@@ -3529,20 +3537,6 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
---- !u!114 &5696359274900908500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696359274900908490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b08c164600cc4c9488772a4491f862a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Size: {x: 0, y: 0, z: 0}
-  Center: {x: 0, y: 0, z: 0}
 --- !u!4 &5696359274901402770
 Transform:
   m_ObjectHideFlags: 0
