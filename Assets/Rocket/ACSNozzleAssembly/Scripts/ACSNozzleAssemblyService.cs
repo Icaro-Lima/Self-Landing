@@ -18,8 +18,6 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     public ParticleSystem ThrusterRight;
     public ParticleSystem ThrusterLeft;
 
-    float Influence = 50;
-
     /// <summary>
     /// Flag indicando se o bocal de cima está ligado.
     /// </summary>
@@ -94,7 +92,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Up()
     {
         ThrusterUp.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterUp.transform.forward * Time.deltaTime * Influence, ThrusterUp.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterUp.transform.forward, ThrusterUp.transform.position);
     }
 
     /// <summary>
@@ -103,7 +101,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Down()
     {
         ThrusterDown.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterDown.transform.forward * Time.deltaTime * Influence, ThrusterDown.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterDown.transform.forward, ThrusterDown.transform.position);
     }
 
     /// <summary>
@@ -112,7 +110,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Backward()
     {
         ThrusterBackward.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterBackward.transform.forward * Time.deltaTime * Influence, ThrusterBackward.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterBackward.transform.forward, ThrusterBackward.transform.position);
     }
 
     /// <summary>
@@ -121,7 +119,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Right()
     {
         ThrusterRight.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward * Time.deltaTime * Influence, ThrusterRight.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward, ThrusterRight.transform.position);
     }
 
     /// <summary>
@@ -130,6 +128,6 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Left()
     {
         ThrusterLeft.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward * Time.deltaTime * Influence, ThrusterLeft.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward, ThrusterLeft.transform.position);
     }
 }
