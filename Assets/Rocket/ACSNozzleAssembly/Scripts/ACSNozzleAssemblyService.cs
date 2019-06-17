@@ -50,6 +50,11 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     Rigidbody RocketRigidBody;
 
     /// <summary>
+    /// Um multiplicador para a força.
+    /// </summary>
+    float Multiplier = 70f;
+
+    /// <summary>
     /// O Start é um evento do Unity que é chamado assim que o objeto é criado. Nesse caso ele está
     /// sendo usado para pegar o RigidBody do foguete.
     /// </summary>
@@ -58,7 +63,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
         RocketRigidBody = GetComponentInParent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (UpEnabled)
         {
@@ -92,7 +97,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Up()
     {
         ThrusterUp.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterUp.transform.forward, ThrusterUp.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterUp.transform.forward * Multiplier * Time.fixedDeltaTime, ThrusterUp.transform.position);
     }
 
     /// <summary>
@@ -101,7 +106,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Down()
     {
         ThrusterDown.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterDown.transform.forward, ThrusterDown.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterDown.transform.forward * Multiplier * Time.fixedDeltaTime, ThrusterDown.transform.position);
     }
 
     /// <summary>
@@ -110,7 +115,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Backward()
     {
         ThrusterBackward.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterBackward.transform.forward, ThrusterBackward.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterBackward.transform.forward * Multiplier * Time.fixedDeltaTime, ThrusterBackward.transform.position);
     }
 
     /// <summary>
@@ -119,7 +124,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Right()
     {
         ThrusterRight.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward, ThrusterRight.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterRight.transform.forward * Multiplier * Time.fixedDeltaTime, ThrusterRight.transform.position);
     }
 
     /// <summary>
@@ -128,6 +133,6 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     void Left()
     {
         ThrusterLeft.Play();
-        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward, ThrusterLeft.transform.position);
+        RocketRigidBody.AddForceAtPosition(-ThrusterLeft.transform.forward * Multiplier * Time.fixedDeltaTime, ThrusterLeft.transform.position);
     }
 }

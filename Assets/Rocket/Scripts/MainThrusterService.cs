@@ -12,7 +12,7 @@ public class MainThrusterService : MonoBehaviour
 
     AudioSource AudioSource;
 
-    readonly float ForceMultiplier = 21f;
+    readonly float ForceMultiplier = 1470f;
     readonly float ForceParameterUpVarByUpdate = 0.003f;
     readonly float ForceParameterDownVarByUpdate = 0.006f;
 
@@ -27,7 +27,7 @@ public class MainThrusterService : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         HandleForces();
         HandleSounds();
@@ -53,6 +53,6 @@ public class MainThrusterService : MonoBehaviour
 
         ForceParameter = Mathf.Clamp01(ForceParameter);
 
-        RocketRigidbody.AddForceAtPosition(ForceParameter * ForceMultiplier * transform.forward, transform.position);
+        RocketRigidbody.AddForceAtPosition(ForceParameter * ForceMultiplier * transform.forward * Time.fixedDeltaTime, transform.position);
     }
 }
