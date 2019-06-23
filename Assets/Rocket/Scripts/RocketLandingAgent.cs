@@ -56,6 +56,17 @@ public class RocketLandingAgent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+        // Main Thruster.
+        RocketService.SetTargetMainThrusterPower(vectorAction[0]);
 
+        // Right Rotation
+        RocketService.Up(1, vectorAction[1] == 1);
+        RocketService.Down(0, vectorAction[1] == 1);
+        RocketService.Backward(0, vectorAction[1] == 1);
+
+        // Left Rotation
+        RocketService.Up(0, vectorAction[2] == 1);
+        RocketService.Down(1, vectorAction[2] == 1);
+        RocketService.Backward(1, vectorAction[2] == 1);
     }
 }
