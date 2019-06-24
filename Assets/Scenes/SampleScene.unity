@@ -499,6 +499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth
       objectReference: {fileID: 0}
+    - target: {fileID: 157262, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 432644, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -568,6 +572,33 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1455344840}
+    - target: {fileID: 3973667297351068913, guid: c2e22098ce7c8da4590cceb5113bd50e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973667297351068913, guid: c2e22098ce7c8da4590cceb5113bd50e,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973667297351068913, guid: c2e22098ce7c8da4590cceb5113bd50e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327120452, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327120452, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327120452, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e22098ce7c8da4590cceb5113bd50e, type: 3}
 --- !u!4 &626846860 stripped
@@ -872,8 +903,7 @@ MonoBehaviour:
     broadcastingBrains:
     - {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
     - {fileID: 11400000, guid: 9ee5c8c53297c0545a7bc23cef2f443d, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
+    _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
     width: 80
@@ -3155,6 +3185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetForceParameter: 0
+  ForceParameter: 0
   JetEngineAnimation: {fileID: 165131389}
 --- !u!82 &5696359274900908430
 AudioSource:
@@ -3429,7 +3460,6 @@ GameObject:
   - component: {fileID: 5696359274900908495}
   - component: {fileID: 5696359274900908498}
   - component: {fileID: 5696359274900908499}
-  - component: {fileID: 5696359274900908500}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -3565,7 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f00b6c1079544409e4052f243d7c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 2b1caf2736ef7484687b14db0d15562b, type: 2}
+  brain: {fileID: 11400000, guid: 9ee5c8c53297c0545a7bc23cef2f443d, type: 2}
   agentParameters:
     agentCameras: []
     agentRenderTextures: []
@@ -3574,18 +3604,6 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 10
   BoxCollider: {fileID: 1729948047}
---- !u!114 &5696359274900908500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696359274900908490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27601dea0c9a39d469b7a410806863a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5696359274901402770
 Transform:
   m_ObjectHideFlags: 0

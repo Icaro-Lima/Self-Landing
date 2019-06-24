@@ -29,6 +29,11 @@ public class RocketService : MonoBehaviour
         ACSNozzleAssemblyServices = GetComponentsInChildren<ACSNozzleAssemblyService>();
     }
 
+    public void ResetMainThrusterPower()
+    {
+        MainThrusterService.ForceParameter = 0;
+    }
+
     /// <summary>
     /// Seta o poder do motor principal.
     /// </summary>

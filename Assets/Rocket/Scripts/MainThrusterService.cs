@@ -6,7 +6,7 @@ public class MainThrusterService : MonoBehaviour
 {
     public float TargetForceParameter = 0;
 
-    public float ForceParameter { get; private set; }
+    public float ForceParameter;
 
     Rigidbody RocketRigidbody;
 

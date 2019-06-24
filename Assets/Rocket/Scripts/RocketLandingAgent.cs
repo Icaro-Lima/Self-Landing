@@ -38,6 +38,11 @@ public class RocketLandingAgent : Agent
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        Done();
+    }
+
     /// <summary>
     /// Método chamado na hora que deve resetar por exemplo a posição do
     /// foguete. As configurações não necessariamente devem ser constantes,
@@ -45,6 +50,16 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
+        RocketService.ResetMainThrusterPower();
+
+        RocketService.Up(1, false);
+        RocketService.Down(0, false);
+        RocketService.Backward(0, false);
+
+        RocketService.Up(0, false);
+        RocketService.Down(1, false);
+        RocketService.Backward(1, false);
+
         Rigidbody.velocity = Vector3.zero;
         Rigidbody.angularVelocity = Vector3.zero;
         Rigidbody.position = InitialPosition;
