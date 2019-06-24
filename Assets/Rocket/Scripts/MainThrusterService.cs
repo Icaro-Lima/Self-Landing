@@ -13,8 +13,8 @@ public class MainThrusterService : MonoBehaviour
     AudioSource AudioSource;
 
     readonly float ForceMultiplier = 1470f;
-    readonly float ForceParameterUpVarByUpdate = 0.003f;
-    readonly float ForceParameterDownVarByUpdate = 0.006f;
+    readonly float ForceParameterUpVarByUpdate = 0.008f;
+    readonly float ForceParameterDownVarByUpdate = 0.008f;
 
     public JetEngineAnimation JetEngineAnimation;
 
