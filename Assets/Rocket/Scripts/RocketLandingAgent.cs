@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class RocketLandingAgent : Agent
 {
+    public BoxCollider BoxCollider;
+
     Rigidbody Rigidbody;
 
     RocketService RocketService;
@@ -30,7 +32,16 @@ public class RocketLandingAgent : Agent
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Vector3 normalFromThePlane = RocketService.NormalFromThePlane();
+            Vector2 normalFromThePlane2 = new Vector2(normalFromThePlane.x, normalFromThePlane.z);
 
+            normalFromThePlane2.x /= BoxCollider.bounds.max.x - BoxCollider.bounds.min.x;
+            normalFromThePlane2.y /= BoxCollider.bounds.max.z - BoxCollider.bounds.min.z;
+
+            print((normalFromThePlane2));
+        }
     }
 
     /// <summary>
