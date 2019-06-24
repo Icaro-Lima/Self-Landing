@@ -6,6 +6,8 @@ public class GravityService : MonoBehaviour
 {
     Rigidbody Rigidbody;
 
+    float _gEarth = 9.8f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +22,15 @@ public class GravityService : MonoBehaviour
 
     float CompGravity()
     {
-        const float gEarth = 9.8f;
         const float rEarth = 1500;
 
         float sqrDistFromCenter = Rigidbody.worldCenterOfMass.sqrMagnitude;
 
-        return gEarth * rEarth * rEarth / sqrDistFromCenter;
+        return _gEarth * rEarth * rEarth / sqrDistFromCenter;
+    }
+
+    public float CompNormalizedGravity()
+    {
+        return CompGravity() / _gEarth;
     }
 }

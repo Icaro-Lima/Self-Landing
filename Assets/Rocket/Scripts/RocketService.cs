@@ -57,6 +57,14 @@ public class RocketService : MonoBehaviour
     }
 
     /// <summary>
+    /// Retorna um vetor normal do plano que aponta para o foguete.
+    /// </summary>
+    public Vector3 NormalFromThePlane()
+    {
+        return Rigidbody.position - Plane.transform.position;
+    }
+
+    /// <summary>
     /// Aciona um dos dois bocais superiores.
     /// </summary>
     /// <param name="assembly">O dispositivo a ser acionado. 0 ou 1.</param>

@@ -8,6 +8,8 @@ public class RocketLandingAgent : Agent
     Rigidbody Rigidbody;
 
     RocketService RocketService;
+    GravityService GravityService;
+    MainThrusterService MainThrusterService;
 
     Vector3 InitialPosition;
     Quaternion InitialRotation;
@@ -18,6 +20,8 @@ public class RocketLandingAgent : Agent
         Rigidbody = GetComponent<Rigidbody>();
 
         RocketService = GetComponent<RocketService>();
+        GravityService = GetComponent<GravityService>();
+        MainThrusterService = GetComponent<MainThrusterService>();
 
         InitialPosition = Rigidbody.position;
         InitialRotation = Rigidbody.rotation;
@@ -47,11 +51,17 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void CollectObservations()
     {
-        AddVectorObs(Rigidbody.velocity);
-        AddVectorObs(Rigidbody.angularVelocity);
-        AddVectorObs(Rigidbody.position);
-        AddVectorObs(Rigidbody.rotation);
-        AddVectorObs(RocketService.NormalToThePlane());
+        Vector2 position2 = new Vector2(Rigidbody.position.x, Rigidbody.position.z);
+        float rotation2 = Rigidbody.rotation.y;
+
+        Vector2 velocity2 = new Vector2(Rigidbody.velocity.x, Rigidbody.velocity.z);
+        float angularVelocity2 = Rigidbody.angularVelocity.y;
+
+        Vector3 normalFromThePlane = RocketService.NormalFromThePlane();
+        Vector2 normalFromThePlane2 = new Vector2(normalFromThePlane.x, normalFromThePlane.z);
+
+        float gravityN = GravityService.CompNormalizedGravity();
+        float mainThrusterForceN = RocketService.GetRealMainThrusterPower();
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
