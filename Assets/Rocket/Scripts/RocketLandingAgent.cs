@@ -34,13 +34,7 @@ public class RocketLandingAgent : Agent
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            Vector3 normalFromThePlane = RocketService.NormalFromThePlane();
-            Vector2 normalFromThePlane2 = new Vector2(normalFromThePlane.x, normalFromThePlane.z);
-
-            normalFromThePlane2.x /= BoxCollider.bounds.max.x - BoxCollider.bounds.min.x;
-            normalFromThePlane2.y /= BoxCollider.bounds.max.z - BoxCollider.bounds.min.z;
-
-            print((normalFromThePlane2));
+            print(Rigidbody.velocity);
         }
     }
 
@@ -62,17 +56,39 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void CollectObservations()
     {
-        Vector2 position2 = new Vector2(Rigidbody.position.x, Rigidbody.position.z);
-        float rotation2 = Rigidbody.rotation.y;
+        float maxVelocityX = 30f;
+        float maxVelocityZ = 120f;
+        float maxAngularVelocity = 15f;
 
-        Vector2 velocity2 = new Vector2(Rigidbody.velocity.x, Rigidbody.velocity.z);
-        float angularVelocity2 = Rigidbody.angularVelocity.y;
+        float limitSizeX = BoxCollider.bounds.max.x - BoxCollider.bounds.min.x;
+        float limitSizeZ = BoxCollider.bounds.max.z - BoxCollider.bounds.min.z;
 
         Vector3 normalFromThePlane = RocketService.NormalFromThePlane();
         Vector2 normalFromThePlane2 = new Vector2(normalFromThePlane.x, normalFromThePlane.z);
+        float rotation = Rigidbody.rotation.y;
+
+        Vector2 velocity2 = new Vector2(Rigidbody.velocity.x, Rigidbody.velocity.z);
+        float angularVelocity = Rigidbody.angularVelocity.y;
+
+        // Normalized Data:
+        Vector2 normalFromThePlane2N = new Vector2(normalFromThePlane2.x / limitSizeX, normalFromThePlane2.y / limitSizeZ);
+        float sin = Mathf.Sin(rotation * Mathf.Deg2Rad);
+        float cos = Mathf.Cos(rotation * Mathf.Deg2Rad);
+
+        Vector2 velocity2N = new Vector2(velocity2.x / maxVelocityX, velocity2.y / maxVelocityZ);
+        float angularVelocityN = angularVelocity / maxAngularVelocity;
 
         float gravityN = GravityService.CompNormalizedGravity();
         float mainThrusterForceN = RocketService.GetRealMainThrusterPower();
+
+        // Adds Observations:
+        AddVectorObs(normalFromThePlane2N);
+        AddVectorObs(sin);
+        AddVectorObs(cos);
+        AddVectorObs(velocity2N);
+        AddVectorObs(angularVelocityN);
+        AddVectorObs(gravityN);
+        AddVectorObs(mainThrusterForceN);
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
