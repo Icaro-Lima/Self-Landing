@@ -6,10 +6,8 @@
 Assets/AssetStoreTools*
 
 # ML-Agents
-Assets/ML-Agents/models
-Assets/ML-Agents/models.meta
-Assets/ML-Agents/summaries
-Assets/ML-Agents/summaries.meta
+UnitySDK.log
+models/ppo-0/LandingLearningBrain/
 
 # Visual Studio cache directory
 .vs/
