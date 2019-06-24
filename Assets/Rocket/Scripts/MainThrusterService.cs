@@ -33,6 +33,10 @@ public class MainThrusterService : MonoBehaviour
         HandleSounds();
 
         JetEngineAnimation.ForceParameter = ForceParameter;
+
+        Vector3 pos = RocketRigidbody.position;
+        pos.y = 0;
+        RocketRigidbody.position = pos;
     }
 
     void HandleSounds()

@@ -15,6 +15,9 @@ public class RocketLandingAgent : Agent
 
     Vector3 InitialPosition;
     Quaternion InitialRotation;
+    Vector3 InitialLocalEulerAngles;
+
+    bool Reseted;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class RocketLandingAgent : Agent
 
         InitialPosition = Rigidbody.position;
         InitialRotation = Rigidbody.rotation;
+        InitialLocalEulerAngles = Rigidbody.transform.localEulerAngles;
     }
 
     // Update is called once per frame
@@ -35,6 +39,21 @@ public class RocketLandingAgent : Agent
         if (Input.GetKeyDown(KeyCode.K))
         {
             print(Rigidbody.velocity);
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (Reseted)
+        {
+            Reseted = false;
+        }
+        else
+        {
+            Vector3 rot = Rigidbody.transform.localEulerAngles;
+            rot.x = InitialLocalEulerAngles.x;
+            rot.z = InitialLocalEulerAngles.z;
+            Rigidbody.transform.localEulerAngles = rot;
         }
     }
 
@@ -50,6 +69,8 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
+        Reseted = true;
+
         RocketService.ResetMainThrusterPower();
 
         RocketService.Up(1, false);
