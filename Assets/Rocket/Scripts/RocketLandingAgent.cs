@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RocketLandingAgent : Agent
 {
-    public BoxCollider BoxCollider;
+    public BoxCollider2D BoxCollider;
 
     Rigidbody2D Rigidbody;
 
@@ -40,7 +40,7 @@ public class RocketLandingAgent : Agent
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         Done();
     }
