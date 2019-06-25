@@ -57,6 +57,6 @@ public class MainThrusterService : MonoBehaviour
 
         ForceParameter = Mathf.Clamp01(ForceParameter);
 
-        RocketRigidbody.AddForceAtPosition(ForceParameter * ForceMultiplier * transform.forward * Time.fixedDeltaTime, transform.position);
+        RocketRigidbody.AddForceAtPosition(TargetForceParameter * ForceMultiplier * transform.forward * Time.fixedDeltaTime, transform.position);
     }
 }
