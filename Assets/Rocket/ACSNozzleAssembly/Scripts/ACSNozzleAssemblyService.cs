@@ -47,12 +47,12 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     /// O RigidBody (controlador de física) do foguete. Note que essa classe deve estar atrelada a
     /// um GameObject dentro do foguete.
     /// </summary>
-    Rigidbody RocketRigidBody;
+    Rigidbody2D RocketRigidBody;
 
     /// <summary>
     /// Um multiplicador para a força.
     /// </summary>
-    float Multiplier = 70f;
+    float Multiplier = 50f;
 
     /// <summary>
     /// O Start é um evento do Unity que é chamado assim que o objeto é criado. Nesse caso ele está
@@ -60,7 +60,7 @@ public class ACSNozzleAssemblyService : MonoBehaviour
     /// </summary>
     void Start()
     {
-        RocketRigidBody = GetComponentInParent<Rigidbody>();
+        RocketRigidBody = GetComponentInParent<Rigidbody2D>();
     }
 
     void FixedUpdate()
