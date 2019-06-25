@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class GravityService : MonoBehaviour
 {
-    Rigidbody Rigidbody;
+    Rigidbody2D Rigidbody;
 
     float _gEarth = 9.8f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody = GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Rigidbody.AddForce((Vector3.zero - Rigidbody.transform.position).normalized * CompGravity(), ForceMode.Acceleration);
+        Rigidbody.AddForce((-Rigidbody.position).normalized * CompGravity());
     }
 
     float CompGravity()

@@ -10,7 +10,7 @@ public class RocketService : MonoBehaviour
 {
     public GameObject Plane;
 
-    Rigidbody Rigidbody;
+    Rigidbody2D Rigidbody;
 
     MainThrusterService MainThrusterService;
     ACSNozzleAssemblyService[] ACSNozzleAssemblyServices;
@@ -23,7 +23,7 @@ public class RocketService : MonoBehaviour
             Debug.LogError("Plane null!");
         }
 
-        Rigidbody = GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody2D>();
 
         MainThrusterService = GetComponentInChildren<MainThrusterService>();
         ACSNozzleAssemblyServices = GetComponentsInChildren<ACSNozzleAssemblyService>();
@@ -56,17 +56,17 @@ public class RocketService : MonoBehaviour
     /// <summary>
     /// Retorna um vetor normal do foguete que aponta para o plano.
     /// </summary>
-    public Vector3 NormalToThePlane()
+    public Vector2 NormalToThePlane()
     {
-        return Plane.transform.position - Rigidbody.position;
+        return Plane.transform.position - Rigidbody.transform.position;
     }
 
     /// <summary>
     /// Retorna um vetor normal do plano que aponta para o foguete.
     /// </summary>
-    public Vector3 NormalFromThePlane()
+    public Vector2 NormalFromThePlane()
     {
-        return Rigidbody.position - Plane.transform.position;
+        return Rigidbody.transform.position - Plane.transform.position;
     }
 
     /// <summary>

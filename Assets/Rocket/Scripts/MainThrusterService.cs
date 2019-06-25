@@ -8,11 +8,11 @@ public class MainThrusterService : MonoBehaviour
 
     public float ForceParameter;
 
-    Rigidbody RocketRigidbody;
+    Rigidbody2D RocketRigidbody2D;
 
     AudioSource AudioSource;
 
-    readonly float ForceMultiplier = 1470f;
+    readonly float ForceMultiplier = 450f;
     readonly float ForceParameterUpVarByUpdate = 0.008f;
     readonly float ForceParameterDownVarByUpdate = 0.008f;
 
@@ -21,7 +21,7 @@ public class MainThrusterService : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RocketRigidbody = GetComponentInParent<Rigidbody>();
+        RocketRigidbody2D = GetComponentInParent<Rigidbody2D>();
 
         AudioSource = GetComponent<AudioSource>();
     }
@@ -33,10 +33,6 @@ public class MainThrusterService : MonoBehaviour
         HandleSounds();
 
         JetEngineAnimation.ForceParameter = ForceParameter;
-
-        Vector3 pos = RocketRigidbody.position;
-        pos.y = 0;
-        RocketRigidbody.position = pos;
     }
 
     void HandleSounds()
@@ -57,6 +53,6 @@ public class MainThrusterService : MonoBehaviour
 
         ForceParameter = Mathf.Clamp01(ForceParameter);
 
-        RocketRigidbody.AddForceAtPosition(TargetForceParameter * ForceMultiplier * transform.forward * Time.fixedDeltaTime, transform.position);
+        RocketRigidbody2D.AddForceAtPosition(TargetForceParameter * ForceMultiplier * transform.forward * Time.fixedDeltaTime, transform.position);
     }
 }

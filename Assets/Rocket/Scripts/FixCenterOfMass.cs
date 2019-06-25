@@ -6,12 +6,12 @@ public class FixCenterOfMass : MonoBehaviour
 {
     public Transform CenterOfMassTransform;
 
-    Rigidbody Rigidbody;
+    Rigidbody2D Rigidbody2D;
 
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.centerOfMass = CenterOfMassTransform.localPosition;
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        Rigidbody2D.centerOfMass = CenterOfMassTransform.localPosition;
     }
 }
