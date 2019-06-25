@@ -119,7 +119,7 @@ public class RocketLandingAgent : Agent
         RocketService.Down(1, vectorAction[2] == 1);
         RocketService.Backward(1, vectorAction[2] == 1);
 
-        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(7 * Mathf.Deg2Rad)) AddReward(0.3333f);
+        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(15 * Mathf.Deg2Rad)) AddReward(0.3333f);
         if (Mathf.Abs(RocketService.NormalFromThePlane().x) <= 8) AddReward(0.3333f);
         if (Mathf.Abs(Rigidbody.velocity.y - (-25)) <= 5) AddReward(0.3333f);
 
