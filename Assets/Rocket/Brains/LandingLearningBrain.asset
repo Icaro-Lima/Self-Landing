@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LandingLearningBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 8
+    vectorObservationSize: 7
     numStackedVectorObservations: 1
     vectorActionSize: 020000000200000002000000
     cameraResolutions: []

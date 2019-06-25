@@ -101,7 +101,7 @@ public class RocketLandingAgent : Agent
         AddVectorObs(cos);
         AddVectorObs(velocity2N);
         AddVectorObs(angularVelocityN);
-        AddVectorObs(gravityN);
+        //AddVectorObs(gravityN);
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
@@ -119,8 +119,10 @@ public class RocketLandingAgent : Agent
         RocketService.Down(1, vectorAction[2] == 1);
         RocketService.Backward(1, vectorAction[2] == 1);
 
-        if (-Mathf.Sin(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(7 * Mathf.Deg2Rad)) AddReward(0.3333f);
+        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(7 * Mathf.Deg2Rad)) AddReward(0.3333f);
         if (Mathf.Abs(RocketService.NormalFromThePlane().x) <= 8) AddReward(0.3333f);
         if (Mathf.Abs(Rigidbody.velocity.y - (-25)) <= 5) AddReward(0.3333f);
+
+        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) <= Mathf.Cos(150 * Mathf.Deg2Rad)) AddReward(-1f);
     }
 }

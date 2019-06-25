@@ -22,11 +22,13 @@ public class GravityService : MonoBehaviour
 
     float CompGravity()
     {
-        const float rEarth = 1500;
+        /*const float rEarth = 1500;
 
         float sqrDistFromCenter = Rigidbody.worldCenterOfMass.sqrMagnitude;
 
-        return _gEarth * rEarth * rEarth / sqrDistFromCenter;
+        return _gEarth * rEarth * rEarth / sqrDistFromCenter;*/
+
+        return 9.8f;
     }
 
     public float CompNormalizedGravity()
