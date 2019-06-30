@@ -13,7 +13,7 @@ public class RocketLandingAgent : Agent
     GravityService GravityService;
     MainThrusterService MainThrusterService;
 
-    Vector3 InitialPosition;
+    Vector2 InitialPosition;
     float InitialRotation;
 
     bool Reseted;
@@ -66,8 +66,8 @@ public class RocketLandingAgent : Agent
 
         Rigidbody.velocity = Vector3.zero;
         Rigidbody.angularVelocity = 0;
-        Rigidbody.position = InitialPosition;
-        Rigidbody.rotation = InitialRotation;
+        Rigidbody.position = InitialPosition + new Vector2(Random.Range(-10, 10), Random.Range(-20, 20));
+        Rigidbody.rotation = InitialRotation + Random.Range(-15, 15);
     }
 
     /// <summary>
