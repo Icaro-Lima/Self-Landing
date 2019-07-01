@@ -16,8 +16,6 @@ public class RocketLandingAgent : Agent
     Vector3 InitialPosition;
     float InitialRotation;
 
-    bool Reseted;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -52,8 +50,6 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
-        Reseted = true;
-
         RocketService.ResetMainThrusterPower();
 
         RocketService.Up(1, false);
