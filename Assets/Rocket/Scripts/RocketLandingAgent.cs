@@ -13,7 +13,7 @@ public class RocketLandingAgent : Agent
     GravityService GravityService;
     MainThrusterService MainThrusterService;
 
-    Vector3 InitialPosition;
+    Vector2 InitialPosition;
     float InitialRotation;
 
     // Start is called before the first frame update
