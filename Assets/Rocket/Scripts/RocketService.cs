@@ -12,6 +12,7 @@ public class RocketService : MonoBehaviour
 
     Rigidbody2D Rigidbody;
 
+    public Animator LegsAnimator;
     MainThrusterService MainThrusterService;
     ACSNozzleAssemblyService[] ACSNozzleAssemblyServices;
 
@@ -27,6 +28,16 @@ public class RocketService : MonoBehaviour
 
         MainThrusterService = GetComponentInChildren<MainThrusterService>();
         ACSNozzleAssemblyServices = GetComponentsInChildren<ACSNozzleAssemblyService>();
+    }
+
+    public void OpenLegs()
+    {
+        LegsAnimator.SetBool("Close", false);
+    }
+
+    public void ResetLegs()
+    {
+        LegsAnimator.SetBool("Close", true);
     }
 
     public void ResetMainThrusterPower()

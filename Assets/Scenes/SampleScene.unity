@@ -3637,6 +3637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Plane: {fileID: 1794884559}
+  LegsAnimator: {fileID: 1260974293}
 --- !u!114 &5696359274900908499
 MonoBehaviour:
   m_ObjectHideFlags: 0
