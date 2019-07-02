@@ -50,7 +50,6 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
-        RocketService.ResetLegs();
         RocketService.ResetMainThrusterPower();
 
         RocketService.Up(1, false);
@@ -119,6 +118,10 @@ public class RocketLandingAgent : Agent
         if (RocketService.NormalFromThePlane().y <= 300)
         {
             RocketService.OpenLegs();
+        }
+        else
+        {
+            RocketService.ResetLegs();
         }
 
         if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(15 * Mathf.Deg2Rad)) AddReward(0.3333f);
