@@ -115,7 +115,7 @@ public class RocketLandingAgent : Agent
         RocketService.Down(1, vectorAction[2] == 1);
         RocketService.Backward(1, vectorAction[2] == 1);
 
-        if (RocketService.NormalFromThePlane().y <= 300)
+        if (RocketService.NormalFromThePlane().y <= 600)
         {
             RocketService.OpenLegs();
         }
@@ -124,10 +124,11 @@ public class RocketLandingAgent : Agent
             RocketService.ResetLegs();
         }
 
-        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(15 * Mathf.Deg2Rad)) AddReward(0.3333f);
-        if (Mathf.Abs(RocketService.NormalFromThePlane().x) <= 8) AddReward(0.3333f);
-        if (Mathf.Abs(Rigidbody.velocity.y - (-25)) <= 5) AddReward(0.3333f);
+        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) >= Mathf.Cos(15 * Mathf.Deg2Rad)) AddReward(0.3f);
+        if (Mathf.Abs(RocketService.NormalFromThePlane().x) <= 8) AddReward(0.6f);
+        if (Mathf.Abs(Rigidbody.velocity.y - (-25)) <= 5 && Rigidbody.velocity.y <= 0) AddReward(0.1f);
 
-        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) <= Mathf.Cos(150 * Mathf.Deg2Rad)) AddReward(-1f);
+        if (Mathf.Cos(Rigidbody.rotation * Mathf.Deg2Rad) <= Mathf.Cos(150 * Mathf.Deg2Rad)) AddReward(-0.5f);
+        if (Mathf.Abs(RocketService.NormalFromThePlane().x) >= 20) AddReward(-0.1f);
     }
 }
