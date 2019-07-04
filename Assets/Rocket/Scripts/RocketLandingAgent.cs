@@ -25,8 +25,8 @@ public class RocketLandingAgent : Agent
         GravityService = GetComponent<GravityService>();
         MainThrusterService = GetComponent<MainThrusterService>();
 
-        InitialPosition = Rigidbody.position + new Vector2(Random.Range(-30, 30), Random.Range(-30, 30));
-        InitialRotation = Rigidbody.rotation + Random.Range(-25, 25);
+        InitialPosition = Rigidbody.position;
+        InitialRotation = Rigidbody.rotation;
     }
 
     // Update is called once per frame
@@ -62,8 +62,8 @@ public class RocketLandingAgent : Agent
 
         Rigidbody.velocity = Vector3.zero;
         Rigidbody.angularVelocity = 0;
-        Rigidbody.position = InitialPosition;
-        Rigidbody.rotation = InitialRotation;
+        Rigidbody.position = InitialPosition + new Vector2(Random.Range(-30, 30), Random.Range(-30, 30));
+        Rigidbody.rotation = InitialRotation + Random.Range(-25, 25);
     }
 
     /// <summary>
