@@ -6,8 +6,10 @@ using UnityEngine;
 public class RocketLandingAgent : Agent
 {
     public BoxCollider2D BoxCollider;
+    public GameObject Thanos;
 
     Rigidbody2D Rigidbody;
+    public GameObject clone;
 
     RocketService RocketService;
     GravityService GravityService;
@@ -32,8 +34,19 @@ public class RocketLandingAgent : Agent
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.L))
+        {
+            Thanos.SetActive(true);
+            Vector3 pos = Thanos.transform.position;
+            pos.x = transform.position.x;
+            pos.z = transform.position.z;
+            Thanos.transform.position = pos;
+            Instantiate(clone, gameObject.transform.position, gameObject.transform.rotation);
+            DestroyImmediate(gameObject);
+        }
         if (Input.GetKeyDown(KeyCode.K))
         {
+            Done();
             print(-Mathf.Sin(Rigidbody.rotation * Mathf.Deg2Rad));
         }
     }
@@ -50,6 +63,7 @@ public class RocketLandingAgent : Agent
     /// </summary>
     public override void AgentReset()
     {
+        Thanos.SetActive(false);
         RocketService.ResetMainThrusterPower();
 
         RocketService.Up(1, false);
@@ -62,8 +76,8 @@ public class RocketLandingAgent : Agent
 
         Rigidbody.velocity = Vector3.zero;
         Rigidbody.angularVelocity = 0;
-        Rigidbody.position = InitialPosition + new Vector2(Random.Range(-30, 30), Random.Range(-30, 30));
-        Rigidbody.rotation = InitialRotation + Random.Range(-25, 25);
+        Rigidbody.position = InitialPosition;
+        Rigidbody.rotation = InitialRotation;
     }
 
     /// <summary>
@@ -115,7 +129,7 @@ public class RocketLandingAgent : Agent
         RocketService.Down(1, vectorAction[2] == 1);
         RocketService.Backward(1, vectorAction[2] == 1);
 
-        if (RocketService.NormalFromThePlane().y <= 600)
+        if (RocketService.NormalFromThePlane().y <= 200)
         {
             RocketService.OpenLegs();
         }

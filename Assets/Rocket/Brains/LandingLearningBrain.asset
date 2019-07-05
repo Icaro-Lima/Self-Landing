@@ -22,5 +22,5 @@ MonoBehaviour:
     - Right
     - Left
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: 3619431090491271694, guid: 625ce294d4e2c8c48bd9f82ef9cde65b, type: 3}
   inferenceDevice: 0
