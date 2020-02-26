@@ -2,11 +2,13 @@
 Este repositório se destina ao projeto da disciplina Inteligência Artificial, do curso de Ciência da Computação - UFCG.
 Se trata de uma simulação onde o objetivo é que uma Inteligência Artificial consiga pousar o foguete automaticamente, utilizando-se apenas de uma interface de controle simples.
 
-Vídeos com sons podem ser encontrados aqui: https://drive.google.com/open?id=1B3l98YTAOyNHww4u0M_2XukfGg9von3q
+Vídeo: https://www.youtube.com/watch?v=LaAoCKmpaEM
 
 ![](5%20-%20pouco%20em%20ambiente%203D.gif)
 
 ### Extra
+
+Vídeo: https://www.youtube.com/watch?v=TbmpbfmMKUU
 
 ![](Extra.gif)
 
