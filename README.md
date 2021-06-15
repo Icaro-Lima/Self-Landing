@@ -1,6 +1,5 @@
 # Self-Landing
-This repository is intended for the project of the Artificial Intelligence discipline, of the Computer Science course - UFCG.
-It is a simulation where the objective is that an Artificial Intelligence can land the rocket automatically, using only a simple control interface.
+An automated vertical rocket landing in 3D using machine learning. Created using TensorFlow for training and inference, and also used Unity 3D to render the virtual environment.
 
 [See on YouTube](https://www.youtube.com/watch?v=LaAoCKmpaEM)
 
